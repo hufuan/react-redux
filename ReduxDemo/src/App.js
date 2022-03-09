@@ -5,7 +5,6 @@ import Auth from "./components/Auth";
 import Layout from "./components/Layout";
 import Notification from './components/Notification'
 import { fetchData, sendCartData } from "./store/cart-actions";
-import {uiActions} from './store/ui-slice';
 let isFirstRender = true;
 
 function App() {
