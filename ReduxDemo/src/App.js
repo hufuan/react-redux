@@ -34,7 +34,7 @@ function App() {
 	
   return (
     <div className="App">
-      
+      <Notification type={notification.type} message={notification.message}/>
       { !isLoggedIn && <Auth />}
       { isLoggedIn && <Layout/>}
     </div>

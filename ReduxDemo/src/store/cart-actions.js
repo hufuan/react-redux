@@ -46,7 +46,7 @@ export const sendCartData = (cart)=>{
         dispatch(uiActions.showNotification({
           open: true,
           message: "sent Request to Database successfully",
-          type: 'success+'
+          type: 'success'
         }))
       }
     

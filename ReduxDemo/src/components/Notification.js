@@ -10,7 +10,9 @@ const Notification = ({type, message}) => {
     const notification = useSelector(state=>state.ui.notification);
     const handleClose = ()=>{
         dispatch(uiActions.showNotification({
-            open: false
+            open: false,
+			message: "closed",
+            type: 'success+'
           }))
     }
   return (
