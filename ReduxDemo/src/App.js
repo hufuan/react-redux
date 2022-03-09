@@ -16,11 +16,12 @@ function App() {
   const notification= useSelector(state=>state.ui.notification);
   const cart = useSelector(state=>state.cart);
   const isLoggedIn = useSelector(state=>state.auth.isLoggedIn);
-
+	
   useEffect(()=>{
     dispatch(fetchData())
   }, [dispatch])
-
+	
+	
   useEffect(()=>{
     if (isFirstRender){
       isFirstRender = false;
@@ -30,10 +31,10 @@ function App() {
       dispatch(sendCartData(cart));
     }
   }, [cart, dispatch]);
-
+	
   return (
     <div className="App">
-      <Notification type={notification.type} message={notification.message}/>
+      
       { !isLoggedIn && <Auth />}
       { isLoggedIn && <Layout/>}
     </div>

@@ -7,9 +7,13 @@ import { useSelector } from "react-redux";
 const Layout = () => {
   let total = 0;
   const itemsList = useSelector(state=>state.cart.itemsList);
-  itemsList.forEach(item => {
-    total += item.totalPrice;
-  });
+  if (itemsList) {
+		itemsList.forEach(item => {
+		total += item.totalPrice;
+	  });
+	} else {
+		 console.log("itemsList === null");
+	}
   const showCart = useSelector(state=>state.cart.showCart);
   return (
     <React.Fragment>
